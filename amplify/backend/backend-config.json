@@ -1,10 +1,16 @@
 {
-	"auth": {
-		"myauthapplication7ae1f03e": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [],
-			"customAuth": false
-		}
-	}
+  "auth": {
+    "myauthapplication7ae1f03e": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "s34b23f393": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
 }
