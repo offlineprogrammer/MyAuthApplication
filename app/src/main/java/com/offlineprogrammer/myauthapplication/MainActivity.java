@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Amplify.Auth.signOut(
+                () -> Log.i(TAG, "Signed out successfully"),
+                error -> Log.e(TAG, error.toString())
+        );
 
 
     }
@@ -54,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                             login_textView.setText("Login is successfull");
                             login_with_amazon.setVisibility(View.GONE);
                             log_in_progress.setVisibility(View.GONE);
+                            startActivity(new Intent(MainActivity.this, GalleryActivity.class));
+                            finish();
                         }
                     });
                 },
