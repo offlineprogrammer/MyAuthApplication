@@ -38,10 +38,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //For Testing only
+        /*
+
         Amplify.Auth.signOut(
                 () -> Log.i(TAG, "Signed out successfully"),
                 error -> Log.e(TAG, error.toString())
-        );
+        );*/
 
 
     }
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 AuthProvider.amazon(),
                 this,
                 result -> {
-                    Log.i(TAG, "AuthQuickstart RESULT " + result.toString());
+                    Log.i(TAG, " RESULT " + result.toString());
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -64,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     });
                 },
                 error -> {
-                    Log.e(TAG, "AuthQuickstart ERROR " + error.toString());
+                    Log.e(TAG, " ERROR " + error.toString());
                 }
         );
 
